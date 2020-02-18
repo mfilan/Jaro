@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Jaro</title>
@@ -14,7 +15,7 @@
 				
 </head>
 
-<body data-spy = "scroll" data-target ="#navbarResponsive" >
+<body data-spy = "scroll" data-target ="#navbarResponsive" data-offset="400" >
 <!--- Start Home Section --->
 <div id = "home">
 <!--- Navigation --->
@@ -71,7 +72,7 @@
 		<div class = "heading-underline"></div>
 	</div>
 	<div class = "row text-center">
-		<div class="col-md-6">
+		<div class="row-inner col-md-6">
 			<div data-aos="fade-right"  data-aos-duration="1000" class="animate">
 				<a class = "comp_icon " ><img src = "img/comp_icon.png" ></a>
 			</div >
@@ -192,7 +193,7 @@
 		</div>	
 
 		</div>
-		<div class="col-md-6">
+		<div class="row-inner col-md-6">
 			<div data-aos="fade-left"  data-aos-duration="1000" class="animate">
 				<a class = "comp_icon" ><img src = "img/building.png" ></a>
 			</div>
@@ -264,16 +265,16 @@
 <div id = "contact" class = "offset">
 <div class="footer">
 	<div class="row inner-footer">
-		<div class = "col-md-3 text-center">
+		<div class = "footer-items col-md-3 text-center">
 			<img src="img/JARO.png">
 		</div>
-		<div class = "col-md-3 text-center">
+		<div class = "footer-items col-md-3 text-center">
 			<p><i class="fas fa-phone"></i>     +48 601 636 720</p>
 		</div>
-		<div class = "  col-md-3 text-center">
+		<div class = "footer-items  col-md-3 text-center">
 			<p><i class="fas fa-envelope"></i>     jarek@jaro.com.pl</p>
 		</div>
-		<div class = " col-md-3 text-center">
+		<div class = "footer-items col-md-3 text-center">
 			<p><i class="fas fa-map-marker-alt"></i>     ul. Irysowa 1,  86-065 Łochowo,  Polska</p>
 		</div>
 	</div>
@@ -305,24 +306,28 @@ $('.variable-width').slick({
 	autoplaySpeed: 2500,
 	draggable: false,
 	speed:500,
+	centerPadding: '150px',
 	responsive: [
                             {
-                              breakpoint: 1200,
+                              breakpoint: 1000,
                               settings: {
                                 slidesToShow: 3,
                                 slidesToScroll: 1
                               }
                             },
                             {
-                              breakpoint: 1008,
+                              breakpoint: 800,
                               settings: {
                                 slidesToShow: 2,
                                 slidesToScroll: 1
                               }
                             },
                             {
-                              breakpoint: 800,
-                              settings: "unslick"
+                              breakpoint: 600,
+							  settings: {
+                                slidesToShow: 1,
+                                slidesToScroll: 1
+                              }
                             }
 
                           ]
@@ -331,21 +336,18 @@ $('.variable-width').slick({
 });
 </script>
 <script>
-	$(window).resize(function () {
-    $('.js-slider').not('.slick-initialized').slick('resize');
-});
+	var offset = 70;
 
-$(window).on('orientationchange', function () {
-    $('.js-slider').not('.slick-initialized').slick('resize');
+$('.navbar li a').click(function(event) {
+	event.preventDefault();
+	$($(this).attr('href'))[0].scrollIntoView();
+	scrollBy(0, -offset);
 });
 </script>
 <!--- End of Script Source Files -->
 
 </body>
 </html>
-
-
-
 
 
 
