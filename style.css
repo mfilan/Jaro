@@ -104,7 +104,11 @@ h3.heading{
 img {
 	vertical-align: middle;
 	border-style: none;
-	margin-top: 2rem !important;
+}
+.row-inner{
+  display : flex;
+  align-items : center;
+  justify-content: center;
 }
 /* COMPANIES */
 .jumbotron {
@@ -156,17 +160,21 @@ img {
  .inner-footer{
   width: 95%;
   margin: auto;
-  padding: 30px 10px;
-
+  grid-template-rows: 100px !important;
+  display : flex;
+  align-items : center;
+  justify-content: center;
+  }
 }
+
 p {
-	margin-top: 3.7rem;
+  vertical-align: middle;
+	/* margin-top: 3.7rem; */
 
 }
  .footer img{
   max-width:100%; 
   height:5rem;
-  top: 20%;
 } 
 .footer-bottom{
   padding-bottom: 10px;
@@ -174,6 +182,24 @@ p {
 .fa-phone,.fa-envelope,.fa-map-marker-alt{
   color:#45B8AC;
 }
+/* .sc img {
+  height: calc(50vh - 100px);
+  width: auto;
+  margin: 0 auto; 
+  width: 100% !important ;
+  text-align: center !important;
+} */
+.slick-track {
+  margin:auto;
+  text-align: center !important;
+}
+.slick-slide{
+ 
+  text-align: center !important;
+   margin:auto;
+}
+
+
 
 /*============ BOOTSTRAP BREAK POINTS:
 
