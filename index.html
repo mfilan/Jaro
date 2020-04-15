@@ -459,6 +459,26 @@ $('.navbar li a').click(function(event) {
 	  });
 	}
   </script>
+	
+	
+	<script>
+	var contentString ="Your Content String";
+	google.maps.event.addListener(marker, 'click', function() {
+		// Add this line
+		var infowindow = new google.maps.InfoWindow();
+		infowindow.setContent(contentString);
+		infowindow.open(map, marker);
+	}); 
+	</script>
+
+  <script src="https://www.google.com/recaptcha/api.js?render=6LdJ5ekUAAAAAJiMzWdZjg0MEL2nRzNU8MjQZk4z"></script>
+	<script>
+	grecaptcha.ready(function() {
+		grecaptcha.execute('6LdJ5ekUAAAAAJiMzWdZjg0MEL2nRzNU8MjQZk4z', {action: 'homepage'}).then(function(token) {
+		...
+		});
+	});
+	</script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAkTRPqb-rQqkJiEo458mV-7Q8gxjx7s90&callback=initMap"
   async defer></script>
 
