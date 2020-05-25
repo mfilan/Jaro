@@ -1,5 +1,6 @@
 <?php
 if (isset($_POST['sumbit'])){
+    header("Location: index.html?mailsend");
     $mailFrom = $_POST['email'];
     $temat = $_POST['temat'];
     $wiadomosc = $_POST['wiadomosc'];
