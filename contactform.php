@@ -30,7 +30,7 @@ $smtp = Mail::factory('smtp', array(
         'port' => '465',
         'auth' => true,
         'username' => 'mfilon13@gmail.com',
-        'password' => 'Babunia-123'
+        'password' => ''
     ));
 
 $mail = $smtp->send($to, $headers, $body);
